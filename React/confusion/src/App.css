@@ -51,7 +51,7 @@
 .jumbotron {
   padding:70px 30px 70px 30px;
   margin:0px auto;
-  background: #9575CD ;
+  background: #9575CD !important; ;
   color:floralwhite;
 }
 
@@ -63,4 +63,8 @@ address{
 
 .navbar-dark {
   background-color: #512DA8;
+}
+
+a:hover{
+  cursor: pointer;
 }
