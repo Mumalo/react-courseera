@@ -15,6 +15,7 @@ import {
 } from 'reactstrap'
 import {Link} from 'react-router-dom'
 import {Control, Errors, LocalForm} from 'react-redux-form'
+import {Loading} from "./LoadingComponent";
 
 
 function RenderDish({dish}) {
@@ -168,9 +169,28 @@ class CommentForm extends React.Component {
 
 }
 
-const Dishdetail = ({dish, comments, addComment}) => {
+const Dishdetail = ({dish, comments, addComment, isLoading, errMess}) => {
 
-    if (dish) {
+    if (isLoading){
+        return(
+          <div className="container">
+              <div className="row">
+                  <Loading/>
+              </div>
+          </div>
+        )
+    }
+
+    else if (errMess){
+        return(
+            <div className="container">
+                <div className="row">
+                    <h4>{errMess}</h4>
+                </div>
+            </div>
+        )
+    }
+    else if (dish != null) {
         return (
             <div className="container">
                 <div className="row">

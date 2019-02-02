@@ -1,0 +1,12 @@
+
+Redux middleware provides the capability to intercept actions before they are dispatched to the redux store
+
+It forms a pipeline that wraps around teh dsipatch
+
+ middleware pipleline is done by calling applyMiddleWare function from redux
+
+ Thunk
+ it is a programming subroutine that is used to inject and additional calculation in another subroutine
+ allows you to write an action creator that returns a function instead of an action
+   -> can be used to delay the dispatch of an action or dispatch when a certain condition is met
+ The inner function defined inside a thunk gives you action to getState and dispatch methods
