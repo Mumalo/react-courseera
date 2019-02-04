@@ -10,3 +10,42 @@ It forms a pipeline that wraps around teh dsipatch
  allows you to write an action creator that returns a function instead of an action
    -> can be used to delay the dispatch of an action or dispatch when a certain condition is met
  The inner function defined inside a thunk gives you action to getState and dispatch methods
+
+Web services
+A designed way to support interoperability of systems connected over a network
+It is called Service Oriented Architecture (SOAP)
+Two common approaches to web services include:
+SOAP (Simple Object Access Protocol) based services
+    uses WSDL (Web Services Description Language)
+    is XML based
+REST (Representational State Transfer)
+   Uses Web Standards
+   Exchange of data using either XML or JSON
+   Simpler compared to SOAP, WSDL etc
+
+REST is a style of software architecture that is designed for distributed hypermedia systems like the World Wide Web
+It was introduced as a doctoral dissertation by Roy Fielding
+The architecture addresses a number of principles that specify how resources ae define and addressed
+It has four main  design principles
+  built upon HTTP protocol
+  Desinged to be stateless
+  Way of providing resources is to expose their urls
+  Supports JSON and XML as data exchange format
+Motivation for suggesting REST:
+    Capture the xtics of the Web that made it successful
+    like uri to address resources
+    HTTP protocol
+    Make request, receive response, display response
+
+In the REST World you'll hear of Nouns (resources), Verbs (actions) and Representations (how resources are conveyed
+back to the client)
+REST uses URI to identify resources
+
+A promise is a proxy for a value that will or never become available
+Promise has three states
+    Pending
+    Fulfilled and
+    Rejected state
+
+Fetch API is a modern replacement of the XMPHttpRequest()
+Other Fetch alternatives include: Axios and Superagent

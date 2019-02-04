@@ -16,6 +16,7 @@ import {
 import {Link} from 'react-router-dom'
 import {Control, Errors, LocalForm} from 'react-redux-form'
 import {Loading} from "./LoadingComponent";
+import {baseUrl} from "../shared/baseUrl";
 
 
 function RenderDish({dish}) {
@@ -23,7 +24,7 @@ function RenderDish({dish}) {
     return (
         <div className="col-12 col-md-5 m-1">
             <Card>
-                <CardImg width="100%" object src={dish.image} alt={dish.name} className="card-img-top"/>
+                <CardImg width="100%" object src={baseUrl + dish.image} alt={dish.name} className="card-img-top"/>
                 <CardBody>
                     <p className="card-text">{dish.description}</p>
                 </CardBody>
@@ -56,7 +57,6 @@ function RenderComments({comments, addComment, dishId}) {
                 <CommentForm
                     dishId={dishId}
                     addComment={addComment}
-                    dishId={dishId}
                 />
             </div>
         </div>
@@ -171,26 +171,23 @@ class CommentForm extends React.Component {
 
 const Dishdetail = ({dish, comments, addComment, isLoading, errMess}) => {
 
-    if (isLoading){
-        return(
-          <div className="container">
-              <div className="row">
-                  <Loading/>
-              </div>
-          </div>
+    if (isLoading) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <Loading/>
+                </div>
+            </div>
         )
-    }
-
-    else if (errMess){
-        return(
+    } else if (errMess) {
+        return (
             <div className="container">
                 <div className="row">
                     <h4>{errMess}</h4>
                 </div>
             </div>
         )
-    }
-    else if (dish != null) {
+    } else if (dish != null) {
         return (
             <div className="container">
                 <div className="row">
